@@ -1,6 +1,5 @@
-const mongoose = require('mongoose');
-
-const UserSchema = new mongoose.Schema({
+{
+  _id: ObjectId,
   email: { type: String, unique: true, required: true },
   password: { type: String, required: true },
   firstName: String,
@@ -8,8 +7,6 @@ const UserSchema = new mongoose.Schema({
   phone: { type: String, required: true },
   userType: { type: String, enum: ['customer', 'admin'], default: 'customer' },
   isVerified: { type: Boolean, default: false },
-  createdAt: { type: Date, default: Date.now },
-  updatedAt: { type: Date, default: Date.now }
-});
-
-module.exports = mongoose.model('User', UserSchema);
+  createdAt: Date,
+  updatedAt: Date
+}
