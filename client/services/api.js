@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://voucher-backend-jfd9.onrender.com/api', // Change to your backend URL
+  baseURL: "http://voucher-backend-jfd9.onrender.com/api", // Change to your backend URL
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json'
